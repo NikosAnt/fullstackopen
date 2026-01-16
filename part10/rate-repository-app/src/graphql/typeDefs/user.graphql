@@ -1,0 +1,12 @@
+input AuthenticateInput {
+  username: String!
+  password: String!
+}
+
+type AuthenticatePayload {
+  accessToken: String!
+}
+
+extend type Mutation {
+  authenticate(credentials: AuthenticateInput!): AuthenticatePayload!
+}

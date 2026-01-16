@@ -1,0 +1,19 @@
+query GetReviews($repositoryId: ID!) {
+  repository(id: $repositoryId) {
+    id
+    fullName
+    reviews {
+      edges {
+        node {
+          id
+          rating
+          text
+          createdAt
+          user {
+            ...UserBasic
+          }
+        }
+      }
+    }
+  }
+}

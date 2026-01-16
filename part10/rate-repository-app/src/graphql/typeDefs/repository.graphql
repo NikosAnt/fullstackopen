@@ -1,0 +1,6 @@
+query GetRepository($id: ID!) {
+  repository(id: $id) {
+    ...RepositoryBasic
+    url
+  }
+}

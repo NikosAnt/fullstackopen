@@ -1,0 +1,17 @@
+schema:
+  - http://localhost:4000/graphql
+
+documents:
+  - "src/graphql/typeDefs/**/*.graphql"
+
+generates:
+  src/graphql/generated/graphql.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typed-document-node
+    config:
+      # Keep runtime output minimal; types are erased at build time.
+      enumsAsTypes: true
+      skipTypename: false
+      avoidOptionals: true

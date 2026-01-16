@@ -1,0 +1,77 @@
+{
+  "name": "rate-repository-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android --lan --clear",
+    "adb:connect": "bash scripts/adb-connect.sh",
+    "dev": "bash scripts/dev.sh",
+    "logcat": "bash scripts/logcat.sh",
+    "logcat:all": "bash scripts/logcat-all.sh",
+    "logcat:clear": "adb logcat -c",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "jest",
+    "codegen": "graphql-codegen --config codegen.yml"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "transform": {
+      "^.+\\.[jt]sx?$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!.*((jest-)?react-native|@react-native|@react-native-community|expo(nent)?|@expo(nent)?|expo-.*)/)"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.js"
+    ]
+  },
+  "ncu": {
+    "reject": [
+      "jest",
+      "babel-jest",
+      "jest-expo"
+    ]
+  },
+  "dependencies": {
+    "@apollo/client": "^4.0.12",
+    "@dotenvx/dotenvx": "^1.51.4",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "date-fns": "^4.1.0",
+    "expo": "~54.0.31",
+    "expo-status-bar": "~3.0.9",
+    "formik": "^2.4.9",
+    "graphql": "^16.12.0",
+    "react": "19.2.3",
+    "react-native": "0.83.1",
+    "react-router-native": "^6.30.0",
+    "yup": "^1.7.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.6",
+    "@babel/eslint-parser": "^7.28.6",
+    "@eslint/js": "^9.39.2",
+    "@graphql-codegen/cli": "^6.1.1",
+    "@graphql-codegen/typed-document-node": "^6.1.5",
+    "@graphql-codegen/typescript": "^5.0.7",
+    "@graphql-codegen/typescript-operations": "^5.0.7",
+    "@testing-library/jest-native": "^5.4.3",
+    "@testing-library/react-native": "^13.3.3",
+    "babel-jest": "^29.7.0",
+    "babel-preset-expo": "^54.0.9",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.39.2",
+    "eslint-plugin-jest": "^29.12.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-native": "^5.0.0",
+    "globals": "^17.0.0",
+    "jest": "^29.7.0",
+    "jest-expo": "^54.0.16",
+    "prettier": "^3.7.4",
+    "react-test-renderer": "^19.2.3"
+  },
+  "private": true,
+  "packageManager": "pnpm@10.28.0"
+}

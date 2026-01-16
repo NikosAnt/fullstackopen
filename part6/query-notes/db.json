@@ -1,0 +1,19 @@
+{
+  "notes": [
+    {
+      "content": "react query simplifies the communication with backened",
+      "important": true,
+      "id": "1"
+    },
+    {
+      "content": "useReduce with context is an alternative way for data management",
+      "important": false,
+      "id": "2"
+    },
+    {
+      "id": "fb0a",
+      "content": "new stuff gets rendered",
+      "important": true
+    }
+  ]
+}

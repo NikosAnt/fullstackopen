@@ -1,0 +1,16 @@
+query GetRepositories {
+  repositories {
+    edges {
+      node {
+        ...RepositoryBasic
+      }
+      cursor
+    }
+    pageInfo {
+      endCursor
+      startCursor
+      hasNextPage
+    }
+    totalCount
+  }
+}

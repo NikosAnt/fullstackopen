@@ -1,0 +1,46 @@
+{
+  "name": "bloglist-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "start": "NODE_ENV=production node --import=extensionless/register index.js",
+    "dev": "NODE_ENV=development node --import=extensionless/register --watch index.js",
+    "test": "NODE_ENV=test node --import=extensionless/register --test",
+    "lint": "eslint .",
+    "start:test": "NODE_ENV=test node --import=extensionless/register --watch index.js"
+  },
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.51.1",
+    "bcrypt": "^6.0.0",
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "express-validator": "^7.3.0",
+    "extensionless": "^2.0.2",
+    "helmet": "^8.1.0",
+    "http-errors-enhanced": "^3.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.19.3",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-node": "^0.3.9",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-n": "^17.23.1",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-security": "^3.0.1",
+    "eslint-plugin-unicorn": "^62.0.0",
+    "eslint-plugin-vitest": "^0.5.4",
+    "globals": "^16.5.0",
+    "prettier": "^3.6.2",
+    "supertest": "^7.1.4"
+  },
+  "packageManager": "pnpm@10.22.0+sha512.bf049efe995b28f527fd2b41ae0474ce29186f7edcb3bf545087bd61fbbebb2bf75362d1307fda09c2d288e1e499787ac12d4fcb617a974718a6051f2eee741c"
+}

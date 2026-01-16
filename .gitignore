@@ -1,0 +1,11 @@
+# filepath: /home/cobray/projects/fullstackopen/.gitignore
+
+# Node.js dependencies
+**/node_modules/
+
+# Package manager files
+**/pnpm-lock.yaml
+**/pnpm-workspace.yaml
+
+# Environment variables
+**/.env

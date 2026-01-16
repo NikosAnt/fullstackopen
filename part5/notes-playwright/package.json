@@ -1,0 +1,33 @@
+{
+  "name": "notes-playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "test": "playwright test --trace on",
+    "test:ui": "playwright test --ui",
+    "test:codegen": "pnpm exec playwright codegen http://localhost:5173/",
+    "lint": "eslint .",
+    "dev": "./scripts/dev.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.17.1",
+  "devDependencies": {
+    "@dotenvx/dotenvx": "^1.51.0",
+    "@eslint/js": "^9.36.0",
+    "@playwright/test": "^1.55.1",
+    "@types/node": "^24.5.2",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-playwright": "^2.2.2",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-unicorn": "^61.0.2",
+    "globals": "^16.4.0",
+    "prettier": "^3.6.2"
+  }
+}
