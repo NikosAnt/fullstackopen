@@ -1,0 +1,78 @@
+{
+  "name": "rate-repository-api",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
+    "lint": "eslint ./src",
+    "test": "jest .",
+    "migrate:make": "knex migrate:make",
+    "migrate:latest": "knex migrate:latest",
+    "build": "pnpm migrate:latest",
+    "seed:make": "knex seed:make",
+    "seed:run": "knex seed:run",
+    "format": "prettier --write ."
+  },
+  "lint-staged": {
+    "src/**/*.js": "eslint",
+    "*.{js,json,css,md}": "prettier --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaltsoon/rate-repository-api.git"
+  },
+  "author": "Kalle Ilves",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kaltsoon/rate-repository-api/issues"
+  },
+  "homepage": "https://github.com/Kaltsoon/rate-repository-api#readme",
+  "dependencies": {
+    "@koa/cors": "^5.0.0",
+    "apollo-server": "^3.13.0",
+    "apollo-server-core": "^3.13.0",
+    "apollo-server-koa": "^3.13.0",
+    "axios": "^1.13.2",
+    "bcrypt": "^6.0.0",
+    "dataloader": "^2.2.3",
+    "date-fns": "^4.1.0",
+    "dotenv": "^17.2.3",
+    "es6-error": "^4.1.1",
+    "esm": "^3.2.25",
+    "graphql": "^16.12.0",
+    "jsonwebtoken": "^9.0.3",
+    "knex": "^3.1.0",
+    "koa": "^3.1.1",
+    "koa-bodyparser": "^4.4.1",
+    "koa-morgan": "^1.0.1",
+    "koa-router": "^14.0.0",
+    "lodash": "^4.17.21",
+    "lru-cache": "^11.2.4",
+    "objection": "^3.1.5",
+    "sqlite3": "^5.1.7",
+    "through2": "^4.0.2",
+    "uuid": "^13.0.0",
+    "winston": "^3.19.0",
+    "yup": "^1.7.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/eslint-parser": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "eslint": "^9.39.2",
+    "eslint-plugin-jest": "^29.12.1",
+    "husky": "^9.1.7",
+    "jest": "^30.2.0",
+    "lint-staged": "^16.2.7",
+    "nodemon": "^3.1.11",
+    "prettier": "^3.7.4"
+  }
+}
